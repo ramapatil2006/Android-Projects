@@ -1,3 +1,13 @@
 {
-  "ghcr.io/casl0/devcontainer-features/android-sdk:1": {}
+  "name": "Android Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "redhat.vscode-xml"
+      ]
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y android-sdk"
 }
